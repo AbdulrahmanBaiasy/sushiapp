@@ -5,18 +5,18 @@
 
 @import url("sections/header.css");
 @import url("sections/hero.css"); 
-/*@import url("sections/about.css"); 
+@import url("sections/about.css"); 
 @import url("sections/popular.css"); 
 @import url("sections/trending.css"); 
 @import url("sections/subscribe.css"); 
 @import url("sections/footer.css"); 
- */
+
 
 /* css variables for reusability across all files (including above imprted ) */
 
 :root {
   --playfair-display: "Platfair Display", serif;
-  --plus-jakarta-sanse: "Plus jakarta Sans", sans-serif;
+  --plus-jakarta-sans: "Plus jakarta Sans", sans-serif;
 
   --primary-color: #b1454a;
   --secondary-color: #121212;
@@ -25,7 +25,7 @@
   --black-300: #333333;
   --black-400: #1f1e31;
   --black-500: #555555;
-  --gray-100: #800000;
+  --gray-100: #888888;
 
   --color-white: #fff;
   --color-creamson: #fff0de;
@@ -39,7 +39,7 @@
 }
 
 body {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
   background-color: var(--color-creamson);
 }
@@ -64,9 +64,9 @@ a {
 .sushi__subtitle {
   font-size: 18px;
   font-weight: 400;
-  font-family: var (--plus-jakarta-sanse);
+  font-family: var(--plus-jakarta-sans);
 
-  color: var (--primary-color);
+  color: var(--primary-color);
   opacity: 0.8;
   letter-spacing: -0.01rem;
 }
@@ -76,19 +76,19 @@ a {
   font-weight: 600;
   font-family: var(--playfair-display);
 
-  color: var (--secondary-color);
+  color: var(--secondary-color);
 
   margin-top: 16px;
 }
 
-.sushi__desciption {
+.sushi__description {
   font-size: 18px;
   font-weight: 400;
-  font-family: var (--plus-jakarta-sanse);
+  font-family: var(--plus-jakarta-sans);
 
   line-height: 36px;
   letter-spacing: -0.01rem;
-  color: var (--secondary-color);
+  color: var(--secondary-color);
   opacity: 0.8;
 
   margin: 32px 0px;
@@ -116,11 +116,11 @@ a {
     flex-direction: row;
   }
 
-  .about_us__image-sushi3 {
+  .about-us__image-sushi3 {
     border-bottom: none;
     border-right: 8px solid var(--color-creamson);
   }
-  .about-us_butotn {
+  .about-us__button {
     display: none;
   }
 }
@@ -150,12 +150,12 @@ a {
 /* START: header media querie */
 @media screen and (max-width: 900px) {
   .header__nav {
-    background: var (--primary-color);
+    background: var(--primary-color);
   }
-  .header_menu {
+  .header__menu {
     display: none;
   }
-  .header_menu-mobile {
+  .header__menu-mobile {
     display: flex;
   }
 }
@@ -197,7 +197,7 @@ a {
   }
 
   .hero-content-info h1 {
-    font-size: 60 px;
+    font-size: 60px;
   }
 
   .hero-content-info p {
@@ -207,7 +207,7 @@ a {
   .hero-content__buttons {
     margin: 41px 0;
   }
-  .hero-content__testomonial {
+  .hero-content__testimonial {
     padding: 32px;
   }
 }
@@ -215,13 +215,13 @@ a {
 
 /* START: popular media queries */
 
-@media screne and (max-width: 550px) {
+@media screen and (max-width: 550px) {
   .popular-foods {
     padding: 64px 32px;
   }
 
   .popular-foods__card,
-  .popular-foods_card.active-card {
+  .popular-foods__card.active-card {
     min-width: 100%;
   }
 }
@@ -241,7 +241,7 @@ a {
     flex-direction: column;
     gap: 20px;
 
-    max-width: 100%;
+    min-width: 100%;
     border-radius: 20px;
     padding: 0;
 
